@@ -10,7 +10,7 @@ if (!process.env.FEED) {
 }
 
 var geos      		   = require(path.join('..', process.env.FEED)),
-	BoundingBox 	   = require('../lib/generator.js'),
+	BoundingBox 	   = require('../index').BoundingBox,
 	maxLngLatNorthWest = [-12.336640, 73.042122],
 	maxLngLatSouthEast = [38.041500, 32.970699], // european area
 	kmPerImage 		   = 750,

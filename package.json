@@ -2,7 +2,7 @@
   "name": "voronoi-geolocation",
   "version": "1.0.0",
   "description": "voronoi geolocation",
-  "main": "./lib/generator.js",
+  "main": "./lib/index.js",
   "dependencies": {
     "canvas": "~1.2.1",
     "pngjs": "~0.4.0",
