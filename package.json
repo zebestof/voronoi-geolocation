@@ -1,0 +1,20 @@
+{
+  "name": "voronoi-geolocation",
+  "version": "0.0.0",
+  "description": "voronoi geolocation",
+  "main": "./lib/generator.js",
+  "dependencies": {
+    "canvas": "~1.2.1",
+    "pngjs": "~0.4.0",
+    "d3": "*"
+  },
+  "devDependencies": {
+    "mocha": "2.2.5"
+  },
+  "scripts": {
+    "start": "./bin/generate-voronoi.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
