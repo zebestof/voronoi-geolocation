@@ -1,6 +1,6 @@
 {
   "name": "voronoi-geolocation",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "voronoi geolocation",
   "main": "./lib/generator.js",
   "dependencies": {
