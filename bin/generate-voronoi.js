@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 "use strict";
 
-var path = require('path');
+var path = require('path'),
+	fs 	 = require('fs');
 
 if (!process.env.FEED) {
 	console.log('Please add "FEED=<path_to_file>"');
@@ -14,7 +15,14 @@ var geos      		   = require(path.join('..', process.env.FEED)),
 	maxLngLatSouthEast = [38.041500, 32.970699], // european area
 	kmPerImage 		   = 750,
 	width 			   = 750,
-	height 			   = 750;
+	height 			   = 750,
+	buildDir 		   = __dirname+'/../build';
+
+
+
+if (!fs.existsSync(buildDir)) {
+	fs.mkdirSync(buildDir);
+}
 
 var boundings = BoundingBox.Factory(maxLngLatNorthWest, maxLngLatSouthEast, kmPerImage);
-BoundingBox.GenerateDb(boundings, width, height, geos, __dirname+'/../build');
+BoundingBox.GenerateDb(boundings, width, height, geos, buildDir);
